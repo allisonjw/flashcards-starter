@@ -9,16 +9,16 @@ const Turn = require('../src/Turn');
 
 class Game {
   constructor() {
-    this.currentRound
+    this.currentRound = 0;
   }
 
   start() {
-    //creates cards
-    const cards = this.prototypeQuestions.map(card => new Card(cards))
-    //puts cards in deck
-    const deck = new Deck(cards)
-    this.printMessage(deck, round);
-    this.printQuestion(round)
+    this.currentRound++
+    let cards = prototypeQuestions.map(card => new Card(card))
+    let deck = new Deck(cards)
+    let currentRound = new Round(deck)
+    this.printMessage(deck, currentRound);
+    this.printQuestion(currentRound)
   }
 
   printMessage(deck, round) {

@@ -1,7 +1,7 @@
-import chai from 'chai';
+const chai = require('chai');
 const expect = chai.expect;
 
-import Game from '../src/Game';
+const Game = require('../src/Game');
 
 
 describe('Game', () => {
@@ -19,6 +19,6 @@ describe('Game', () => {
   it('should start a game', () => {
     game.start();
   });
-  
+
   
 });

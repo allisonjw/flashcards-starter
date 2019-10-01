@@ -64,11 +64,8 @@ describe('Deck', () => {
     expect(round.calculatePercentCorrect()).to.equal(33);
   });
 
-  it('should end the round and inform the player the percentage of correct answers', () => {
-    round.takeTurn('object');
-    round.takeTurn('appendix');
-    round.takeTurn('William');
-    expect(round.endRound()).to.equal('** Round over! ** You answered 33% of the questions correctly!');
+  it('should end the round', () => {
+    round.endRound();
   });
 
 });    

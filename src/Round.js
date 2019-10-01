@@ -22,20 +22,16 @@ class Round {
     } else {
       return turn.giveFeedback()
     }
-    //next card in cards array becomes current card
-    //this.currentCard = this.deck.cards[0]++
-    //this.turn.evaluatedGuess() if incorrect will be stored in this.incorrectGuesses.push(wrong guess by id)
-    //this.turn.giveFeedback()
   }
 
   calculatePercentCorrect() {
-    // calcs and returns the percent
     return Math.floor(100 * (this.deck.cards.length - this.incorrectGuesses.length) / this.deck.cards.length);
   }
 
   endRound() {
-    return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`
-    // prints the following to the console: ‘** Round over! ** You answered <>% of the questions correctly!’
+    this.turns = 0;
+    // eslint-disable-next-line no-console
+    console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
   }
 }
 
