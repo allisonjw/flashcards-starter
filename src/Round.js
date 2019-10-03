@@ -1,11 +1,14 @@
 const Turn = require('../src/Turn');
+const Game = require('../src/Game');
+
 
 class Round {
-  constructor(deck) {
+  constructor(deck, game) {
     this.deck = deck;
     this.incorrectGuesses = [];
     this.turns = 0;
     this.currentCard;
+    this.game = game;
   }
 
   returnCurrentCard() {
@@ -31,19 +34,26 @@ class Round {
   endRound() {
     this.turns = 0;
     // eslint-disable-next-line no-console
-    console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    // console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    if (this.calculatePercentCorrect() > 85) {
+      console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`); 
+    } else {
+      console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly! Play again to get over 90 percent`);
+      this.game.start()
+    }
   }
+}
 
-  //stopwatch()
-  //use setTimeout() and setInterval()
-  //let timerId = setTimeout(endRound, 100)
-  //console.log(`It took you ${timer} to finish`)
+//stopwatch()
+//use setTimeout() and setInterval()
+//let timerId = setTimeout(endRound, 100)
+//console.log(`It took you ${timer} to finish`)
   
 
-  //nextDataset()
-  //conditional if prototypeQuestions is empty 
-  //OR envoke this method in endRound
-}
+//nextDataset()
+//conditional if prototypeQuestions is empty 
+//OR envoke this method in endRound
+
 
 
 module.exports = Round;
