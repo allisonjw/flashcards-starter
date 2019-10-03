@@ -4,7 +4,11 @@
 
 This is a game of trivia played in your console. Implementation of ES6 classes and a robust testing suite using Mocha and Chai. Follow the setup instructions below to play!
 
-## [Live Image](https://github.com/allisonjw/flashcards-starter/blob/master/images/final_FC.gif)
+## Live Image
+
+Here is an example of what the game will look like when played.
+
+![example](https://github.com/allisonjw/flashcards-starter/blob/master/images/final_FC.gif)
 
 ## Setup
 
