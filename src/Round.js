@@ -33,6 +33,16 @@ class Round {
     // eslint-disable-next-line no-console
     console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
   }
+
+  //stopwatch()
+  //use setTimeout() and setInterval()
+  //let timerId = setTimeout(endRound, 100)
+  //console.log(`It took you ${timer} to finish`)
+  
+
+  //nextDataset()
+  //conditional if prototypeQuestions is empty 
+  //OR envoke this method in endRound
 }
 
 
