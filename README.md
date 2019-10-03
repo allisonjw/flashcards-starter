@@ -1,6 +1,6 @@
 # Flashcards Game of Trivia 
 
-## Allison Wagner [GitHub](https://github.com/allisonjw)
+## Allison Wagner [Github Page](https://github.com/allisonjw)
 
 This is a game of trivia played in your console. Implementation of ES6 classes and a robust testing suite using Mocha and Chai. Follow the setup instructions below to play!
 
