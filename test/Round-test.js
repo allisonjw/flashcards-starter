@@ -66,7 +66,10 @@ describe('Deck', () => {
   });
 
   it('should end the round', () => {
-    round.endRound()
+    round.takeTurn('object');
+    round.takeTurn('appendix');
+    round.takeTurn('William');
+    expect(round.endRound()).to.equal('** Round over! ** You answered 33% of the questions correctly! Time to complete 0 minutes and 0.00 seconds.')
   });
 
 });    

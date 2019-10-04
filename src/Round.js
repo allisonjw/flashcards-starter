@@ -6,6 +6,7 @@ class Round {
     this.incorrectGuesses = [];
     this.turns = 0;
     this.currentCard;
+    this.startWatch = Date.now();
   }
 
   returnCurrentCard() {
@@ -28,11 +29,17 @@ class Round {
     return Math.floor(100 * (this.deck.cards.length - this.incorrectGuesses.length) / this.deck.cards.length);
   }
 
+  stopWatch() {
+    let endWatch = Date.now();
+    let playTime = endWatch - this.startWatch;
+    var minutes = Math.floor(playTime / 60000);
+    var seconds = ((playTime % 60000) / 1000).toFixed(2);
+    return `${minutes} minutes and ${seconds} seconds.`;
+  }
+
   endRound() {
     this.turns = 0;
-    // eslint-disable-next-line no-console
-    console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
-    process.exit();
+    return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly! Time to complete ${this.stopWatch()}`;
   }
 }
 
